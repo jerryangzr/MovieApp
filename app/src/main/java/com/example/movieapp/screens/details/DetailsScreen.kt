@@ -4,7 +4,9 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -81,8 +83,13 @@ fun DetailsScreen(navController: NavController, movieId: String?) {
             ) {
                 MovieRow(movie = filterMovieList.first())
                 Spacer(modifier = Modifier.height(8.dp))
-                Text("Movie Images", style = MaterialTheme.typography.titleLarge)
                 HorizontalDivider()
+                Text(
+                    "Movie Images",
+                    style = MaterialTheme.typography.headlineLarge,
+                    modifier = Modifier.padding(top = 20.dp)
+                )
+                Spacer(modifier = Modifier.height(50.dp))
                 HorizontalScrollableImageView(filterMovieList)
             }
         }

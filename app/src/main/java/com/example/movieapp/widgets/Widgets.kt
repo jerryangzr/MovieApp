@@ -64,12 +64,15 @@ fun MovieRow(movie: Movie = getMovies()[0], onItemClick: (String) -> Unit = {}) 
         shape = RoundedCornerShape(corner = CornerSize(16.dp)),
         elevation = CardDefaults.cardElevation(6.dp)
     ) {
-        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.Start) {
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.Start
+        ) {
             Surface(
                 modifier = Modifier
                     .padding(12.dp)
                     .size(100.dp),
-                shape = RectangleShape,
+                shape =  CircleShape,
                 shadowElevation = 4.dp
             ) {
                 AsyncImage(
