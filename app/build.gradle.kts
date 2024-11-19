@@ -77,4 +77,8 @@ dependencies {
     implementation(libs.androidx.navigation.dynamic.features.fragment)
     // Testing Navigation
     androidTestImplementation(libs.androidx.navigation.testing)
+
+    // Coil
+    implementation(libs.coil.compose)
+    implementation(libs.coil.network.okhttp)
 }
